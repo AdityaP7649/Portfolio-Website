@@ -1,44 +1,60 @@
-import "./Navbar.css";
+import { useState } from "react";
+import {
+  Menu,
+  MenuItem,
+  ProductItem,
+} from "../../components/ui/navbar-menu";
+import "./Navbar.css"
 
-function Navbar() {
+const Navbar = () => {
+  const [activeItem, setActiveItem] = useState(null);
+
   return (
-    <div>
-      <nav className="navbar  navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-              <a className="nav-link" href="#">
-                Features
-              </a>
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <div className="navbar-container">
+      <Menu setActive={setActiveItem}>
+        <MenuItem setActive={setActiveItem} active={activeItem} item="About">
+          <ProductItem
+            title="Home"
+            description="This is a description for product 1."
+            href="/product-1"
+            src="/path-to-image-1.jpg"
+          />
+        </MenuItem>
+        <MenuItem setActive={setActiveItem} active={activeItem} item="Experience">
+          <ProductItem
+            title="Home"
+            description="This is a description for product 1."
+            href="/product-1"
+            src="/path-to-image-1.jpg"
+          />
+        </MenuItem>
+        <MenuItem setActive={setActiveItem} active={activeItem} item="Projects">
+          <ProductItem
+            title="Product 2"
+            description="This is a description for product 2."
+            href="/product-3"
+            src="/path-to-image-2.jpg"
+          />
+        </MenuItem>
+        <MenuItem setActive={setActiveItem} active={activeItem} item="Resume">
+          <ProductItem
+            title="Product 2"
+            description="This is a description for product 2."
+            href="/product-2"
+            src="/path-to-image-2.jpg"
+          />
+        </MenuItem>
+        <MenuItem setActive={setActiveItem} active={activeItem} item="Contact">
+          <ProductItem
+            title="Product 2"
+            description="This is a description for product 2."
+            href="/product-3"
+            src="/path-to-image-2.jpg"
+          />
+        </MenuItem>
+      </Menu>
     </div>
   );
-}
+};
 
 export default Navbar;
