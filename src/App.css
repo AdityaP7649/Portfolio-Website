@@ -1,8 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
-.main-container{
-    background-color: black;
-    padding-top: 20px;
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.main-container {
+  background-color: black;
+  padding-top: 20px;
 }

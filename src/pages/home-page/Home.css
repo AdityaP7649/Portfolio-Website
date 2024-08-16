@@ -1,0 +1,23 @@
+.home-main-container {
+  height: 100vh;
+}
+
+.profile-img-container{
+    
+}
+
+.profile-img{
+    display: flex;
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.type-writter-text {
+    display: flex;
+    justify-content: center;
+    
+}

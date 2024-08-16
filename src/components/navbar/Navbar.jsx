@@ -14,41 +14,40 @@ const Navbar = () => {
       <Menu setActive={setActiveItem}>
         <MenuItem setActive={setActiveItem} active={activeItem} item="About">
           <ProductItem
-            title="Home"
-            description="This is a description for product 1."
-            href="/product-1"
-            src="/path-to-image-1.jpg"
+            title="About"
+            href="/" 
+            src="https://images.unsplash.com/photo-1624822409300-77a55845dfff?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
         </MenuItem>
         <MenuItem setActive={setActiveItem} active={activeItem} item="Experience">
           <ProductItem
-            title="Home"
-            description="This is a description for product 1."
-            href="/product-1"
+            title="Experience"
+            description=""
+            href="/experience"
             src="/path-to-image-1.jpg"
           />
         </MenuItem>
         <MenuItem setActive={setActiveItem} active={activeItem} item="Projects">
           <ProductItem
-            title="Product 2"
-            description="This is a description for product 2."
-            href="/product-3"
+            title="Projects"
+            description=""
+            href="/projects"
             src="/path-to-image-2.jpg"
           />
         </MenuItem>
         <MenuItem setActive={setActiveItem} active={activeItem} item="Resume">
           <ProductItem
-            title="Product 2"
-            description="This is a description for product 2."
-            href="/product-2"
+            title="Resume"
+            description=""
+            href="/resume"
             src="/path-to-image-2.jpg"
           />
         </MenuItem>
         <MenuItem setActive={setActiveItem} active={activeItem} item="Contact">
           <ProductItem
-            title="Product 2"
-            description="This is a description for product 2."
-            href="/product-3"
+            title="Contact"
+            description=""
+            href="/contact"
             src="/path-to-image-2.jpg"
           />
         </MenuItem>
