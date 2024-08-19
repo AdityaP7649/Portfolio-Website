@@ -1,9 +1,15 @@
-import "./Contact.css"
+import PinCard from "../../components/pin-card/PinCard";
+import "./Contact.css";
 
 function Contact() {
   return (
-    <div>Contact</div>
-  )
+    <div className="contact-main-container">
+      <PinCard />
+      <PinCard />
+      <PinCard />
+      <PinCard />
+    </div>
+  );
 }
 
-export default Contact
+export default Contact;
