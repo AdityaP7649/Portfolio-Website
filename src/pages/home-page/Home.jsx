@@ -3,11 +3,12 @@ import { TypewriterEffectSmooth } from "../../components/ui/typewriter-effect";
 
 function Home() {
   const words = [
-    { text: "Hello, I am ", className: "text-white-500" },
+    // { text: "Hello, I am ", className: "text-white-500" },
     { text: "Aditya Patil", className: "text-gray-500" },
   ];
 
   return (
+    <>
     <div className="home-main-container">
       <div className="profile-img-container">
         <img
@@ -23,7 +24,10 @@ function Home() {
           cursorClassName="my-custom-cursor-class"
         />
       </div>
+      
     </div>
+    </>
+    
   );
 }
 

@@ -9,7 +9,6 @@ import React, {
 } from "react";
 
 const MouseEnterContext = createContext(undefined);
-
 export const CardContainer = ({
   children,
   className,
@@ -40,7 +39,7 @@ export const CardContainer = ({
   return (
     (<MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
-        className={cn("py-20 flex items-center ", containerClassName)}
+        className={cn("flex items-center ", containerClassName)}
         style={{
           perspective: "1000px",
         }}>

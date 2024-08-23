@@ -1,10 +1,9 @@
 import Card from "../../components/Card/Card";
-import { TracingBeam } from "../../components/ui/tracing-beam";
 import "./Projects.css";
 
 function Projects() {
   return (
-    <TracingBeam className="custom-tracing-beam">
+
       <div className="projects-main-container">
       <Card
         projectTitle="Blog Site"
@@ -48,8 +47,6 @@ function Projects() {
       />
       
     </div>
-    </TracingBeam>
-    
   );
 }
 

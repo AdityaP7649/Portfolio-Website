@@ -1,12 +1,12 @@
 .home-main-container {
-  height: 100vh;
+    height: 80vh;
 }
 
 .profile-img{
     display: flex;
     margin: auto;
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     border-radius: 50%;
     margin-top: 100px;
     margin-bottom: 20px;

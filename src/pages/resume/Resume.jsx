@@ -1,9 +1,12 @@
-import "./Resume.css"
+
+import "./Resume.css";
 
 function Resume() {
   return (
-    <div>Resume</div>
-  )
+    <div className="resume-container">
+      <h1>Resume</h1>
+    </div>
+  );
 }
 
-export default Resume
+export default Resume;
