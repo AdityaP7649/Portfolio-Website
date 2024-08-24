@@ -1,4 +1,3 @@
-"use client";
 import { useState, memo } from "react";
 import { cn } from "../../lib/utils";
 
@@ -6,7 +5,7 @@ export const Card = memo(({ card, index, hovered, setHovered }) => (
   <div
     onMouseEnter={() => setHovered(index)}
     onMouseLeave={() => setHovered(null)}
-    onClick={() => window.location.href = card.url}
+    onClick={() => (window.location.href = card.url)}
     className={cn(
       "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-50 w-full transition-all duration-300 ease-out cursor-pointer",
       hovered !== null && hovered !== index && "blur-sm scale-[0.98]"

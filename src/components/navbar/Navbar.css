@@ -1,8 +1,10 @@
-.navbar-container{
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 2;
+.navbar-container {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  font-family: "Red Hat Mono", monospace;
+  font-optical-sizing: auto;
 }

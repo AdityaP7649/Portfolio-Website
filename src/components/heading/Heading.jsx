@@ -1,9 +1,11 @@
 import "./Heading.css";
 
-function Heading({ title }) {
+function Heading({ title, titleid }) {
   return (
     <>
-      <h1 className="scetion-heading">{title}</h1>
+      <div id={titleid}>
+        <h1 className="scetion-heading">{title}</h1>
+      </div>
     </>
   );
 }

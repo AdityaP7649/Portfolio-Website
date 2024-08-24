@@ -3,21 +3,24 @@ import Heading from "../../components/heading/Heading";
 import RealTimeCampus from "../../assets/project-images/real-time-campus.gif";
 import Spotify from "../../assets/project-images/spotify.gif";
 import Vacation from "../../assets/project-images/vacation.gif";
-import Blog from "../../assets/project-images/blog.gif"
-import RickMorty from "../../assets/project-images/rick-morty.gif"
-import Sweet from "../../assets/project-images/sweet.jpg"
+import Blog from "../../assets/project-images/blog.gif";
+import RickMorty from "../../assets/project-images/rick-morty.gif";
+import Sweet from "../../assets/project-images/sweet.jpg";
 import "./Projects.css";
 
 function Projects() {
   return (
     <>
-      <Heading title="Personal Projects" />
+      <div id="projects">
+        <Heading title="Personal Projects" />
+      </div>
+
       <div className="projects-main-container">
-      <Card
+        <Card
           projectTitle="Blog Site"
-          projectDescription="Blog Site is a platform for sharing and exploring stories, inspired by Medium. Users can create, update, and delete blogs, engaging with community sharing insights and experiences."
+          projectDescription="Blog Site  is a platform for sharing and exploring stories, inspired by Medium. Users can create, update, and delete blogs, engaging with community sharing insights and experiences."
           projectImage={Blog}
-        />  
+        />
         <Card
           projectTitle="Rick and Morty Toy Store"
           projectDescription="Developed a fully functional vacation rental website using the MERN stack, featuring property listings, booking management, and user authentication."

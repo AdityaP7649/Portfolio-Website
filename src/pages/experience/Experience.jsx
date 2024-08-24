@@ -4,9 +4,11 @@ import "./Experience.css";
 function Experience() {
   return (
     <>
-      <Heading title="Experience" />
-      <div className="exp-main-container">
+      <div id="experience">
+        <Heading title="Experience" />
       </div>
+
+      <div className="exp-main-container"></div>
     </>
   );
 }

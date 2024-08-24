@@ -1,12 +1,14 @@
 import Heading from "../../components/heading/Heading";
-import "./Skills.css"
+import "./Skills.css";
 
 function Skills() {
   return (
     <>
-    <Heading title="Skills"/>
+      <div id="skills">
+        <Heading title="Skills" />
+      </div>
     </>
-  )
+  );
 }
 
-export default Skills
+export default Skills;
