@@ -1,8 +1,11 @@
+import Heading from "../../components/heading/Heading";
 import "./Skills.css"
 
 function Skills() {
   return (
-    <div>Skills</div>
+    <>
+    <Heading title="Skills"/>
+    </>
   )
 }
 

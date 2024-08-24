@@ -1,10 +1,11 @@
 
+import Heading from "../../components/heading/Heading";
 import "./Resume.css";
 
 function Resume() {
   return (
     <div className="resume-container">
-      <h1>Resume</h1>
+      <Heading title="Resume"/>
     </div>
   );
 }

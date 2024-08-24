@@ -1,19 +1,59 @@
 .home-main-container {
-    height: 80vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.profile-img{
-    display: flex;
-    margin: auto;
-    height: 350px;
-    width: 350px;
-    border-radius: 50%;
-    margin-top: 100px;
-    margin-bottom: 20px;
+.profile-img {
+  display: flex;
+  margin: auto;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  margin-top: 100px;
+  margin-bottom: 20px;
 }
 
 .type-writter-text {
-    display: flex;
-    justify-content: center;
-    
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 150px;
+}
+
+.about-left-container {
+  height: 400px;
+  width: 25%;
+}
+
+.info-container {
+  display: flex;
+  margin: 10px 0px;
+  font-size: 20px;
+}
+
+.about-right-container {
+  height: 400px;
+  width: 70%; 
+}
+
+.hello-heading {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.about-description{
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.focus-cards-container{
+  margin-top: 50px;
 }

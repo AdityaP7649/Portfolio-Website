@@ -1,11 +1,14 @@
-import "./Experience.css"
+import Heading from "../../components/heading/Heading";
+import "./Experience.css";
 
 function Experience() {
   return (
     <>
-    <h1>Experince</h1>
+      <Heading title="Experience" />
+      <div className="exp-main-container">
+      </div>
     </>
-  )
+  );
 }
 
-export default Experience
+export default Experience;
