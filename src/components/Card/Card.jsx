@@ -11,7 +11,7 @@ export default function App({
       <CardBody className="your-body-class">
         <CardItem
           translateZ={50}
-          className="text-xl font-bold text-neutral-600"
+          className="text-xl font-bold"
         >
           {projectTitle}
         </CardItem>

@@ -9,8 +9,10 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    // your existing config
     extend: {
+      colors: {
+        darkGray: '#212529',
+      },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
       },

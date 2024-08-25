@@ -8,7 +8,9 @@ function Resume() {
         <Heading title="Resume" />
       </div>
 
-      <div className="resume-container"></div>
+      <div className="resume-container">
+        <button className="resume-btn">Download Resume</button>
+      </div>
     </>
   );
 }
