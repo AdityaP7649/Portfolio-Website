@@ -1,11 +1,3 @@
 .exp-main-container{
-  height: 400px;
-}
-
-.line{
-  width: 400px;
-  border: 1px solid #FFF;
-  transform: rotate(90deg);
-  margin: auto;
-  position: relative;
+  height: auto;
 }

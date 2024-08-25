@@ -1,0 +1,8 @@
+.skill-main-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 80%;
+    margin: auto;
+}

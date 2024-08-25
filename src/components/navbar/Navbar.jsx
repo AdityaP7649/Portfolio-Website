@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Menu, MenuItem, ProductItem } from "../../components/ui/navbar-menu";
 import About from "../../assets/navbar-images/about.png"
+import Experience from "../../assets/navbar-images/experience.png";
 import Project from "../../assets/navbar-images/project.png"
+import Skills from "../../assets/navbar-images/skills.png"
 
 import "./Navbar.css";
 
@@ -27,7 +29,7 @@ const Navbar = () => {
             title="Experience"
             description=""
             href="#experience"
-            src="/path-to-image-1.jpg"
+            src={Experience}
           />
         </MenuItem>
         <MenuItem setActive={setActiveItem} active={activeItem} item="Projects">
@@ -43,7 +45,7 @@ const Navbar = () => {
             title="Skills"
             description=""
             href="#skills"
-            src="/path-to-image-2.jpg"
+            src={Skills}
           />
         </MenuItem>
         <MenuItem setActive={setActiveItem} active={activeItem} item="Resume">
