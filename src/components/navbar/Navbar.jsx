@@ -4,6 +4,7 @@ import About from "../../assets/navbar-images/about.png"
 import Experience from "../../assets/navbar-images/experience.png";
 import Project from "../../assets/navbar-images/project.png"
 import Skills from "../../assets/navbar-images/skills.png"
+import Resume from "../../assets/navbar-images/Resume.png"
 
 import "./Navbar.css";
 
@@ -53,7 +54,7 @@ const Navbar = () => {
             title="Resume"
             description=""
             href="#resume"
-            src="/path-to-image-2.jpg"
+            src={Resume}
           />
         </MenuItem>
       </Menu>

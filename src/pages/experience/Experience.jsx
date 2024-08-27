@@ -7,27 +7,24 @@ function Experience() {
     {
       title: "Mid 2024",
       content: (
-        <div className="">
-          <ul className="list-disc list-outside font-normal mb-8 text-gray-400">
+        <div>
+          <ul className="list-disc list-outside font-normal mb-8 text-whit-400">
             <li className="mb-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              iusto blanditiis harum, accusamus doloribus ducimus ab iure magni
-              mollitia eos maxime, delectus hic nisi! Omnis, hic. Quisquam non
-              quaerat mollitia?
+              Contributing as a Frontend Engineer to the Digital engineering
+              team, driving innovative solutions and enhancing user experiences.
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              iusto blanditiis harum, accusamus doloribus ducimus ab iure magni
-              mollitia eos maxime, delectus hic nisi! Omnis, hic. Quisquam non
-              quaerat mollitia?
+              Collaborating closely with cross-functional teams to deliver
+              seamless, responsive, and visually appealing web applications that
+              align with business goals.
             </li>
           </ul>
 
-          <div className="grid grid-cols-2 gap-4 ">
+          <div className="grid grid-cols-3 gap-4 ">
             <img
-              src="https://www.spkaa.com/wp-content/uploads/2012/12/spk-redhat-featured-image.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIcml3nEHHjOqhoZHkxUGOZxKbJwcBiEHfuA&s"
               alt="startup template"
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              className="rounded-lg object-fit h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
         </div>
@@ -50,11 +47,11 @@ function Experience() {
               boosting storage efficiency by 15%
             </li>
           </ul>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             <img
               src="https://d8it4huxumps7.cloudfront.net/uploads/images/150x150/uploadedManual-65dd6b6689666_logo_rework_ai.jpeg"
               alt="hero template"
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              className="rounded-lg object-fit h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
         </div>
@@ -76,11 +73,11 @@ function Experience() {
               Maps API.
             </li>
           </ul>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             <img
               src="https://static.vecteezy.com/system/resources/previews/020/190/476/original/infosys-logo-infosys-icon-free-free-vector.jpg"
               alt="hero template"
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              className="rounded-lg object-fit h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
         </div>
@@ -99,11 +96,11 @@ function Experience() {
               Optimized real-time data processing using relational databases.
             </li>
           </ul>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCJUg62MuGIgotpuAUyv-V4E-0_TiaStUOSQ&s"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVb6xhCp5iMyqRjhLoLRVIeW4BrQ_ZOspn0w&s"
               alt="startup template"
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              className="rounded-lg object-fit h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
         </div>

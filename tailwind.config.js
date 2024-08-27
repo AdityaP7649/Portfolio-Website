@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkGray: '#212529',
+        darkBlue: '#0a0908',
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
