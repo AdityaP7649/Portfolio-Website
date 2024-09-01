@@ -1,6 +1,5 @@
 "use client";
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
@@ -43,9 +42,7 @@ export const Timeline = ({ data }) => {
                 {item.title}
               </h3>
             </div>
-
             <div className="relative pl-20 pr-4 md:pl-4 w-full text-black">
-
               {item.content}
             </div>
           </div>

@@ -5,66 +5,57 @@
   align-items: center;
 }
 
+.home-main-container p{
+  font-size: 20px;
+  font-family: "Red Hat Mono", monospace;
+}
+
 .profile-img {
   display: flex;
   margin: auto;
-  height: 350px;
-  width: 350px;
+  height: 400px;
+  width: 400px;
   border-radius: 50%;
   margin-bottom: 20px;
 
 }
 
-.type-writter-text {
-  display: flex;
-  justify-content: center;
+.name{
+  font-family: "Kaushan Script", cursive;
+  margin-bottom: 30px;
+  font-size: 70px;
+  line-height: 1.3;
+  font-weight: 300;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
 
-.about-container {
-  margin-top: 50px;
-  margin-bottom: 100px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 150px;
-  font-family: "Red Hat Mono", monospace;
-  font-optical-sizing: auto;
+.name span::before{
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  content: '';
+  background: #000000;
+  margin-left: -40px;
 }
 
-.about-left-container {
-  height: auto;
-  width: 30%;
+.name span::after{
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 30px;
+  height: 4px;
+  content: '';
+  background: #000000;
+  margin-right: -40px;
 }
 
-.info-container {
-  display: flex;
-  margin: 10px 0px;
-  font-size: 20px;
-  
-}
 
-.info-text{
-  font-weight: 500;
-}
-
-.about-right-container {
-  height: auto;
-  width: 65%; 
-}
-
-.hello-heading {
-  font-size: 35px;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
-.about-description{
-  font-size: 22px;
-  line-height: 35px;
-}
-
-.focus-cards-container{
-  margin-top: 50px;
-}
 
 
 

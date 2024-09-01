@@ -1,5 +1,9 @@
 import Heading from "../../components/heading/Heading";
 import { Timeline } from "../../components/ui/timeline";
+import Redhat from "../../assets/experience-images/Red_Hat-Logo.wine.svg"
+import Rework from "../../assets/experience-images/reworkai_logo.jpeg"
+import Infosys from "../../assets/experience-images/infosys-3.svg"
+import Zensar from "../../assets/experience-images/zensar-technologies-vector-logo.png"
 import "./Experience.css";
 
 function Experience() {
@@ -22,7 +26,7 @@ function Experience() {
 
           <div className="grid grid-cols-3 gap-4 ">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIcml3nEHHjOqhoZHkxUGOZxKbJwcBiEHfuA&s"
+              src={Redhat}
               alt="startup template"
               className="rounded-lg object-fit h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
@@ -49,7 +53,7 @@ function Experience() {
           </ul>
           <div className="grid grid-cols-3 gap-4">
             <img
-              src="https://d8it4huxumps7.cloudfront.net/uploads/images/150x150/uploadedManual-65dd6b6689666_logo_rework_ai.jpeg"
+              src={Rework}
               alt="hero template"
               className="rounded-lg object-fit h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
@@ -75,7 +79,7 @@ function Experience() {
           </ul>
           <div className="grid grid-cols-3 gap-4">
             <img
-              src="https://static.vecteezy.com/system/resources/previews/020/190/476/original/infosys-logo-infosys-icon-free-free-vector.jpg"
+              src={Infosys}
               alt="hero template"
               className="rounded-lg object-fit h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
@@ -98,7 +102,7 @@ function Experience() {
           </ul>
           <div className="grid grid-cols-3 gap-4">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVb6xhCp5iMyqRjhLoLRVIeW4BrQ_ZOspn0w&s"
+              src={Zensar}
               alt="startup template"
               className="rounded-lg object-fit h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />

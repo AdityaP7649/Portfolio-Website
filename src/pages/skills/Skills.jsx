@@ -1,4 +1,3 @@
-
 import Heading from "../../components/heading/Heading";
 import SkilsCard from "../../components/skills-card/SkilsCard";
 import Html from "../../assets/skills-images/HTML5.svg";
@@ -52,14 +51,9 @@ function Skills() {
       <div id="skills">
         <Heading title="Skills" />
       </div>
-      <div className="skill-main-container grid grid-cols-5 gap-5">
+      <div className="skill-main-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
         {skills.map((skill) => {
-          return (
-
-              
-              <SkilsCard skillImg={skill} />
-            
-          );
+          return <SkilsCard key={skill.id} skillImg={skill} />;
         })}
       </div>
     </>

@@ -1,0 +1,68 @@
+.about-container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 120px;
+    font-family: "Red Hat Mono", monospace;
+    font-optical-sizing: auto;
+  }
+  
+  .about-left-container {
+    height: auto;
+    width: 30%;
+  }
+  
+  .info-container {
+    display: flex;
+    margin: 10px 0px;
+    font-size: 20px;
+    
+  }
+  
+  .info-text{
+    font-weight: 500;
+  }
+  
+  .about-right-container {
+    height: auto;
+    width: 65%; 
+  }
+  
+  .hello-heading {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  .about-description{
+    font-size: 22px;
+    line-height: 35px;
+  }
+  
+  .focus-cards-container{
+    margin-top: 50px;
+  }
+
+  @media screen  and (max-width: 1380px) {
+    .about-container {
+      flex-direction: column;
+      padding: 50px;
+    }
+
+    .about-left-container {
+      height: auto;
+      width: 100%;
+    }
+
+    .about-right-container {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  @media screen  and (max-width: 1380px) {
+    .focus-cards-container{
+      padding: 0px 30px;
+    }
+  }
