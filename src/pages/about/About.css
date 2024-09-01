@@ -26,7 +26,8 @@
   
   .about-right-container {
     height: auto;
-    width: 65%; 
+    width: 70%;
+    text-align: justify; 
   }
   
   .hello-heading {
@@ -58,11 +59,20 @@
     .about-right-container {
       height: auto;
       width: 100%;
+      margin-top: 30px;
     }
+
+    
   }
 
   @media screen  and (max-width: 1380px) {
     .focus-cards-container{
       padding: 0px 30px;
+    }
+  }
+
+  @media screen   and (max-width: 496px) {
+    .info-container{
+      flex-direction: column;
     }
   }

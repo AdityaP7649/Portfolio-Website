@@ -5,3 +5,10 @@
   font-family: "Kaushan Script", cursive;
   font-optical-sizing: auto; 
 }
+
+
+@media screen  and (max-width: 480px) {
+  .scetion-heading {
+    font-size: 50px;
+  }
+}
