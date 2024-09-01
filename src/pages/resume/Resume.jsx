@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { LampContainer } from "../../components/ui/lamp";
 import Heading from "../../components/heading/Heading";
 import "./Resume.css";
 
@@ -9,24 +8,23 @@ function Resume() {
       <div id="resume">
         <Heading title="Resume" />
       </div>
-
       <div className="resume-container">
-        <LampContainer>
-          <motion.h1
-            initial={{ opacity: 0.5, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-          >
-            <div>
-              <a href="">Download Resume</a>
-            </div>
-          </motion.h1>
-        </LampContainer>
+        <motion.div
+          className="box"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 17 }}
+        >
+          {" "}
+          <a href="">
+            <button
+              type="button"
+              className="py-10 px-20 me-2 mb-2 text-xl font-large text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 z-20"
+            >
+              Download Resume
+            </button>
+          </a>
+        </motion.div>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+
 import Heading from "../../components/heading/Heading";
 import SkilsCard from "../../components/skills-card/SkilsCard";
 import Html from "../../assets/skills-images/HTML5.svg";
@@ -20,6 +20,7 @@ import Cloud from "../../assets/skills-images/google-cloud-2.svg";
 import Java from "../../assets/skills-images/java-4.svg";
 import Figma from "../../assets/skills-images/figma-icon.svg";
 import Linux from "../../assets/skills-images/tux.svg";
+import ESlint from "../../assets/skills-images/eslint-1.svg";
 import "./Skills.css";
 
 function Skills() {
@@ -43,6 +44,7 @@ function Skills() {
     Cloud,
     Figma,
     Linux,
+    ESlint,
   ];
 
   return (
@@ -50,17 +52,13 @@ function Skills() {
       <div id="skills">
         <Heading title="Skills" />
       </div>
-      <div className="skill-main-container grid grid-cols-5 gap-4">
+      <div className="skill-main-container grid grid-cols-5 gap-5">
         {skills.map((skill) => {
           return (
-            <motion.div
-              className="box"
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 600, damping: 10 }}
-            >
+
+              
               <SkilsCard skillImg={skill} />
-            </motion.div>
+            
           );
         })}
       </div>

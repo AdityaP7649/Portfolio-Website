@@ -42,26 +42,29 @@
   
 }
 
+.info-text{
+  font-weight: 500;
+}
+
 .about-right-container {
   height: auto;
-  width: 70%; 
+  width: 65%; 
 }
 
 .hello-heading {
-  font-size: 30px;
+  font-size: 35px;
   margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .about-description{
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 35px;
 }
 
 .focus-cards-container{
   margin-top: 50px;
 }
 
-.about-description , .info-details{
-  opacity: 70%;
-}
+
 

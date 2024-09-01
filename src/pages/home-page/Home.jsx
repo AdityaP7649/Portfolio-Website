@@ -1,7 +1,5 @@
 import "./Home.css";
-import { TypewriterEffectSmooth } from "../../components/ui/typewriter-effect";
 import { FocusCards } from "../../components/ui/focus-cards";
-import { Meteors } from "../../components/ui/meteors";
 import Heading from "../../components/heading/Heading";
 import Profile from "../../assets/profile-pic.jpg";
 
@@ -29,26 +27,16 @@ function Home() {
     },
   ];
 
-  const words = [
-    // { text: "Hello, I am ", className: "text-white-500" },
-    { text: "Aditya Patil", className: "text-gray-500" },
-  ];
+
 
   return (
     <>
       <div className="relative w-full h-screen overflow-hidden">
-        <Meteors number={30} className="opacity-70" />
         <div className="home-main-container relative z-10 flex flex-col items-center justify-center w-full h-full">
           <div className="profile-img-container">
             <img src={Profile} alt="profile image" className="profile-img" />
           </div>
-          <div className="type-writter-text">
-            <TypewriterEffectSmooth
-              words={words}
-              className="custom-typewriter-text"
-              cursorClassName="my-custom-cursor-class"
-            />
-          </div>
+          <h1>Aditya Patil</h1>
         </div>
       </div>
       <div id="about-me">

@@ -5,10 +5,10 @@ import "./Experience.css";
 function Experience() {
   const data = [
     {
-      title: "Mid 2024",
+      title: "Software Developer",
       content: (
         <div>
-          <ul className="list-disc list-outside font-normal mb-8 text-whit-400">
+          <ul className="list-disc list-outside font-normal mb-8 ">
             <li className="mb-2">
               Contributing as a Frontend Engineer to the Digital engineering
               team, driving innovative solutions and enhancing user experiences.
@@ -31,10 +31,10 @@ function Experience() {
       ),
     },
     {
-      title: "Early 2024",
+      title: "Frontend Engineer",
       content: (
         <div>
-          <ul className="list-disc list-outside font-normal mb-8 text-gray-400">
+          <ul className="list-disc list-outside font-normal mb-8">
             <li className="mb-2">
               Developing and maintaining full-stack applications as a Full Stack
               Engineer on the MERN team at Rework AI. Leveraged React.js to
@@ -58,10 +58,10 @@ function Experience() {
       ),
     },
     {
-      title: "Early 2024",
+      title: "Full Stack Developer",
       content: (
         <div>
-          <ul className="list-disc list-outside font-normal mb-8 text-gray-400">
+          <ul className="list-disc list-outside font-normal mb-8">
             <li className="mb-2">
               Worked as a Full Stack Angular Developer on an e-commerce project,
               handling both front-end and back-end development.
@@ -84,10 +84,10 @@ function Experience() {
       ),
     },
     {
-      title: "Early 2023",
+      title: "Student Traniee",
       content: (
         <div>
-          <ul className="list-disc list-outside font-normal mb-8 text-gray-400">
+          <ul className="list-disc list-outside font-normal mb-8">
             <li className="mb-2">
               Gained hands-on experience in Structured Query Language (SQL) and
               Procedural Language extensions to SQL (PL/SQL).

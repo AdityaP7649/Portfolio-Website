@@ -10,9 +10,6 @@ module.exports = {
   prefix: "",
   theme: {
     extend: {
-      colors: {
-        darkBlue: '#0a0908',
-      },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
       },
