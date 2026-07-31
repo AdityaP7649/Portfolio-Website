@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import ThemeToggle from "./components/theme-toggle/ThemeToggle";
 import Home from "./pages/home-page/Home";
 import About from "./pages/about/About";
 import Experience from "./pages/experience/Experience";
@@ -24,7 +23,6 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <ThemeToggle />
     </div>
   );
 }

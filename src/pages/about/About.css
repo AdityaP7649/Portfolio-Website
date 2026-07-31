@@ -1,286 +1,227 @@
 .about-section {
-  padding: 40px 20px 40px;
-  font-family: "Red Hat Text", sans-serif;
+  padding: 80px 20px;
 }
 
-.about-container {
-  max-width: 1100px;
+.about-wrapper {
+  max-width: 800px;
   margin: 0 auto;
-  display: flex;
-  gap: 50px;
-  align-items: flex-start;
 }
 
-/* Left Column - Info Card */
-.about-left-container {
-  width: 300px;
-  flex-shrink: 0;
+/* Monospace section labels — the signature element */
+.section-label {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-color);
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
 }
 
-.info-card {
-  background: var(--card-bg);
-  border-radius: 16px;
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
+/* Name block */
+.about-header {
+  margin-bottom: 20px;
 }
 
-.info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
+.about-name {
+  display: block;
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin: 0 0 8px;
+  overflow: hidden;
 }
 
-.info-icon {
+.about-role {
+  font-size: 20px;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Contact metadata strip */
+.about-meta {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  background: var(--bg-secondary);
-  border-radius: 10px;
-  color: var(--text-primary);
-  flex-shrink: 0;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
 }
 
-.info-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.info-label {
-  font-size: 11px;
-  font-weight: 500;
+.meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
   color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
-.info-value {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.info-link {
+.meta-link {
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.info-link:hover {
+.meta-link:hover {
   color: var(--accent-color);
 }
 
-/* Right Column - About Content */
-.about-right-container {
-  flex: 1;
-  padding-top: 8px;
-}
-
-.hello-heading {
-  display: block;
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.about-intro {
-  font-size: 19px;
-  line-height: 1.7;
-  color: var(--text-primary);
-  margin-bottom: 18px;
-}
-
-.about-intro strong {
-  color: var(--accent-color);
-}
-
-.about-description {
-  font-size: 17px;
-  line-height: 1.8;
+.meta-divider {
   color: var(--text-secondary);
-  margin-bottom: 14px;
+  opacity: 0.3;
+  user-select: none;
 }
 
-/* Highlights Section */
-.highlights-section {
-  margin-top: 28px;
+/* Divider */
+.about-divider {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 0 0 32px;
 }
 
-.highlights-title {
-  font-size: 20px;
+/* Bio */
+.about-bio {
+  margin-bottom: 48px;
+}
+
+.bio-intro {
+  font-size: 22px;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 16px;
+  line-height: 1.5;
+  margin: 0 0 16px;
 }
 
-.highlights-grid {
+.bio-body {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Capabilities */
+.capabilities-section {
+  margin-bottom: 48px;
+}
+
+.capabilities-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.capability-title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.capability-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
-.highlight-item {
+.capability-list li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Connect links */
+.links-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  background: var(--card-bg);
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 500;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.links-row a {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
   color: var(--text-primary);
-  transition: all 0.2s ease;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.highlight-item:hover {
-  transform: translateX(4px);
-}
-
-.highlight-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--accent-color);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-/* Focus Cards Section */
-.focus-cards-section {
-  max-width: 1100px;
-  margin: 80px auto 0;
-}
-
-.section-subtitle {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--text-primary);
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.focus-cards-container {
-  width: 100%;
+.links-row a:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
 }
 
 /* Responsive */
-@media screen and (max-width: 900px) {
-  .about-container {
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  .about-left-container {
-    width: 100%;
-  }
-
-  .info-card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .about-right-container {
-    padding-top: 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .about-section {
-    padding: 20px 16px 60px;
+    padding: 40px 20px;
   }
 
-  .info-card {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 20px;
+  .about-name {
+    font-size: 36px;
   }
 
-  .info-item {
-    gap: 12px;
+  .about-role {
+    font-size: 17px;
   }
 
-  .info-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .info-label {
-    font-size: 10px;
-  }
-
-  .info-value {
-    font-size: 13px;
-  }
-
-  .highlights-grid {
-    grid-template-columns: 1fr;
+  .about-meta {
     gap: 8px;
   }
 
-  .highlight-item {
-    padding: 10px 12px;
-    font-size: 16px;
+  .meta-item {
+    font-size: 12px;
   }
 
-  .hello-heading {
-    font-size: 24px;
-    margin-bottom: 16px;
+  .capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
-  .about-intro {
-    font-size: 14px;
-    margin-bottom: 14px;
+  .bio-intro {
+    font-size: 19px;
   }
 
-  .about-description {
-    font-size: 13px;
-    margin-bottom: 12px;
-  }
-
-  .highlights-section {
-    margin-top: 20px;
-  }
-
-  .highlights-title {
-    font-size: 16px;
-    margin-bottom: 12px;
-  }
-
-  .focus-cards-section {
-    margin-top: 50px;
-    padding: 0 16px;
-  }
-
-  .section-subtitle {
-    font-size: 18px;
-    margin-bottom: 24px;
+  .bio-body {
+    font-size: 15px;
   }
 }
 
-/* Small mobile */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 480px) {
   .about-section {
-    padding: 16px 12px 50px;
+    padding: 32px 16px;
   }
 
-  .info-card {
-    padding: 16px;
+  .about-name {
+    font-size: 28px;
   }
 
-  .hello-heading {
-    font-size: 22px;
+  .about-role {
+    font-size: 15px;
   }
 
-  .about-intro {
-    font-size: 13px;
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .about-description {
-    font-size: 12px;
+  .bio-intro {
+    font-size: 17px;
+  }
+
+  .links-row {
+    flex-wrap: wrap;
+    gap: 12px;
   }
 }

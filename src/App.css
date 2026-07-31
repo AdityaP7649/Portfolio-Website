@@ -2,32 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS Variables - Light Theme (default) */
+/* CSS Variables — Light only */
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
+  --bg-primary: #edf2f4;
+  --bg-secondary: #e2e6ea;
   --card-bg: #ffffff;
-  --footer-bg: #f9fafb;
-  --text-primary: #111827;
-  --text-secondary: #6b7280;
-  --text-muted: #9ca3af;
-  --border-color: #e5e7eb;
-  --accent-color: #000000;
-  --tag-bg: #f3f4f6;
-}
-
-/* Dark Theme */
-:root.dark {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #171717;
-  --card-bg: #1a1a1a;
-  --footer-bg: #0f0f0f;
-  --text-primary: #f9fafb;
-  --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
-  --border-color: #2d2d2d;
-  --accent-color: #ffffff;
-  --tag-bg: #262626;
+  --footer-bg: #e2e6ea;
+  --text-primary: #2b2d42;
+  --text-secondary: #8d99ae;
+  --text-muted: #a0aab6;
+  --border-color: #c8cdd2;
+  --accent-color: #1b263b;
+  --tag-bg: #dfe3e7;
 }
 
 /* Global Styles */
@@ -45,7 +31,6 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: "Red Hat Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -103,10 +88,6 @@ img {
   outline-offset: 2px;
 }
 
-/* Smooth transitions for theme changes */
-*, *::before, *::after {
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
 
 /* Mobile-specific adjustments */
 @media screen and (max-width: 768px) {

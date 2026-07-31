@@ -294,12 +294,6 @@ const TargetCursor = ({
         .target-cursor-corner {
           border-color: #1a1a1a;
         }
-        :root.dark .target-cursor-dot {
-          background-color: #ffffff;
-        }
-        :root.dark .target-cursor-corner {
-          border-color: #ffffff;
-        }
       `}</style>
       <div
         ref={cursorRef}

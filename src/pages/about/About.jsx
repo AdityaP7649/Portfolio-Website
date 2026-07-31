@@ -1,171 +1,165 @@
 import { motion } from "framer-motion";
-import { 
-  Mail, 
-  MapPin, 
-  Briefcase,
-  User
-} from "lucide-react";
-import { FocusCards } from "../../components/ui/focus-cards";
+import { Mail, MapPin, Briefcase } from "lucide-react";
 import SplitText from "../../components/SplitText";
 import "./About.css";
 
 function About() {
-  const cards = [
+  const capabilities = [
     {
-      title: "LinkedIn",
-      src: "https://i.pinimg.com/736x/0c/78/d0/0c78d03cbfa19d5f3d7ad1b6e49f957b.jpg",
-      url: "https://www.linkedin.com/in/aditya-patil-596413223/",
+      title: "Frontend",
+      items: [
+        "React & Component Architecture",
+        "UI/UX Implementation",
+        "Performance & Accessibility",
+      ],
     },
     {
-      title: "Github",
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6BIlB_ercdvTO34Lq4zm2pPbCXO9lvMOplg&s",
-      url: "https://github.com/AdityaPatil22",
+      title: "Backend",
+      items: [
+        "RESTful API Design",
+        "Database Management",
+        "Cloud & DevOps",
+      ],
     },
     {
-      title: "Leetcode",
-      src: "https://cdn-1.webcatalog.io/catalog/leetcode/leetcode-icon-filled-256.png?v=1714774949349",
-      url: "https://leetcode.com/u/aditya1592/",
+      title: "AI & Intelligence",
+      items: [
+        "LLM Application Development",
+        "RAG Pipelines & Workflows",
+        "Enterprise Deployments",
+      ],
     },
-  ];
-
-  const highlights = [
-    "Frontend & Backend Development",
-    "AI & LLM Application Development",
-    "RESTful API Design",
-    "RAG Pipelines & AI Workflows",
-    "Database Management",
-    "Cloud & DevOps",
-    "Containerized & Enterprise Deployments",
-    "UI/UX Implementation",
-    "Performance Optimization & Accessibility"
   ];
 
   return (
-    <div className="about-section">
-      {/* Main About Content */}
-      <div className="about-container">
-        {/* Left Column - Info Card */}
-        <motion.div 
-          className="about-left-container"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <div className="info-card">
-            <div className="info-item">
-              <div className="info-icon">
-                <User size={18} />
-              </div>
-              <div className="info-content">
-                <span className="info-label">Name</span>
-                <span className="info-value">Aditya Patil</span>
-              </div>
-            </div>
+    <section className="about-section" id="about">
+      <div className="about-wrapper">
+        <span className="section-label">// about</span>
 
-            <div className="info-item">
-              <div className="info-icon">
-                <Mail size={18} />
-              </div>
-              <div className="info-content">
-                <span className="info-label">Email</span>
-                <a href="mailto:adityapatil7649@gmail.com" className="info-value info-link">
-                  adityapatil7649@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <div className="info-item">
-              <div className="info-icon">
-                <MapPin size={18} />
-              </div>
-              <div className="info-content">
-                <span className="info-label">Location</span>
-                <span className="info-value">India</span>
-              </div>
-            </div>
-
-            <div className="info-item">
-              <div className="info-icon">
-                <Briefcase size={18} />
-              </div>
-              <div className="info-content">
-                <span className="info-label">Current Role</span>
-                <span className="info-value">Associate Software Engineer</span>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Right Column - About Content */}
-        <motion.div 
-          className="about-right-container"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
+        <div className="about-header">
           <SplitText
-            text="Hello There!"
-            className="hello-heading"
+            text="Aditya Patil"
+            className="about-name"
             delay={50}
-            duration={0.9}
+            duration={0.6}
             ease="power3.out"
             splitType="chars"
-            from={{ opacity: 0, y: 40, rotateY: 90 }}
-            to={{ opacity: 1, y: 0, rotateY: 0 }}
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
             threshold={0.2}
             rootMargin="-50px"
             tag="h2"
           />
-          
-          <p className="about-intro">
-            I'm a <strong>Full Stack Developer</strong> passionate about building 
-            scalable, accessible, and production-grade web experiences.
-          </p>
+          <p className="about-role">Full Stack Developer</p>
+        </div>
 
-          <p className="about-description">
-            I work across the stack—designing and developing modern front-end 
-            interfaces, integrating robust back-end services, and collaborating 
-            closely with cross-functional teams to deliver reliable solutions.
-          </p>
-
-          <p className="about-description">
-            My experience spans JavaScript-driven ecosystems, component-based UI 
-            development, API integration, and working with containerized environments 
-            in enterprise-grade workflows. I have a strong appreciation for clean 
-            architecture, accessibility, and developer experience.
-          </p>
-
-          {/* What I Do */}
-          <div className="highlights-section">
-            <h3 className="highlights-title">What I Do</h3>
-            <div className="highlights-grid">
-              {highlights.map((item, index) => (
-                <motion.div 
-                  key={index} 
-                  className="highlight-item"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                >
-                  <span className="highlight-dot" />
-                  {item}
-                </motion.div>
-              ))}
-            </div>
-          </div>
+        <motion.div
+          className="about-meta"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <span className="meta-item">
+            <MapPin size={14} />
+            India
+          </span>
+          <span className="meta-divider">&middot;</span>
+          <span className="meta-item">
+            <Briefcase size={14} />
+            Associate Software Engineer
+          </span>
+          <span className="meta-divider">&middot;</span>
+          <a
+            href="mailto:adityapatil7649@gmail.com"
+            className="meta-item meta-link"
+          >
+            <Mail size={14} />
+            adityapatil7649@gmail.com
+          </a>
         </motion.div>
-      </div>
 
-      {/* Focus Cards Section */}
-      <div className="focus-cards-section">
-        <div className="focus-cards-container">
-          <FocusCards cards={cards} />
+        <hr className="about-divider" />
+
+        <motion.div
+          className="about-bio"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <p className="bio-intro">
+            I build scalable, accessible, and production-grade web experiences
+            across the full stack.
+          </p>
+          <p className="bio-body">
+            I design and develop modern front-end interfaces, integrate robust
+            back-end services, and collaborate closely with cross-functional
+            teams to deliver reliable solutions. My experience spans
+            JavaScript-driven ecosystems, component-based UI development, API
+            integration, and containerized enterprise workflows.
+          </p>
+        </motion.div>
+
+        <div className="capabilities-section">
+          <span className="section-label">// capabilities</span>
+          <div className="capabilities-grid">
+            {capabilities.map((group, i) => (
+              <motion.div
+                key={group.title}
+                className="capability-group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="capability-title">{group.title}</h3>
+                <ul className="capability-list">
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <div className="about-links">
+          <span className="section-label">// connect</span>
+          <motion.div
+            className="links-row"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <a
+              href="https://www.linkedin.com/in/aditya-patil-596413223/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            <span className="meta-divider">&middot;</span>
+            <a
+              href="https://github.com/AdityaPatil22"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <span className="meta-divider">&middot;</span>
+            <a
+              href="https://leetcode.com/u/aditya1592/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LeetCode
+            </a>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
