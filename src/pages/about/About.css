@@ -1,118 +1,158 @@
 .about-section {
-  padding: 80px 20px;
+  padding: 100px 20px 80px;
+  min-height: 100vh;
 }
 
-.about-wrapper {
-  max-width: 800px;
+/* Bento grid */
+.about-bento {
+  max-width: 960px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "intro   intro   intro"
+    "bio     bio     bio"
+    "cap1    cap2    cap3"
+    "resume  connect connect";
+  gap: 20px;
 }
 
-/* Monospace section labels — the signature element */
-.section-label {
+.bento-intro   { grid-area: intro; }
+.bento-bio     { grid-area: bio; }
+.bento-cap-1   { grid-area: cap1; }
+.bento-cap-2   { grid-area: cap2; }
+.bento-cap-3   { grid-area: cap3; }
+.bento-resume  { grid-area: resume; }
+.bento-connect { grid-area: connect; }
+
+/* ── Intro card (dark, 3D tilt) ── */
+
+.bento-intro {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.intro-card-container {
+  width: 100% !important;
+}
+
+.intro-card-body {
+  position: relative;
+  background: var(--accent-color);
+  border-radius: 20px;
+  padding: 60px 56px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.intro-dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.intro-card-body > * {
+  position: relative;
+  z-index: 1;
+}
+
+.intro-label {
   display: block;
   font-family: "JetBrains Mono", monospace;
   font-size: 13px;
   font-weight: 500;
-  color: var(--accent-color);
+  color: rgba(255, 255, 255, 0.45);
   letter-spacing: 0.5px;
-  margin-bottom: 24px;
-}
-
-/* Name block */
-.about-header {
   margin-bottom: 20px;
 }
 
-.about-name {
+.intro-name {
   display: block;
-  font-size: 52px;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: clamp(48px, 7vw, 72px);
   font-weight: 800;
-  color: var(--text-primary);
+  color: #ffffff;
   line-height: 1.1;
-  margin: 0 0 8px;
+  margin: 0 0 12px;
   overflow: hidden;
 }
 
-.about-role {
+.intro-role {
   font-size: 20px;
-  color: var(--text-secondary);
-  margin: 0;
   font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 32px;
 }
 
-/* Contact metadata strip */
-.about-meta {
+.intro-meta {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 24px;
   flex-wrap: wrap;
-  margin-bottom: 32px;
 }
 
-.meta-item {
+.intro-meta-item {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-family: "JetBrains Mono", monospace;
   font-size: 13px;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.55);
 }
 
-.meta-link {
-  text-decoration: none;
-  transition: color 0.2s ease;
+/* ── Bio card (full width) ── */
+
+.bento-bio {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.meta-link:hover {
-  color: var(--accent-color);
-}
-
-.meta-divider {
-  color: var(--text-secondary);
-  opacity: 0.3;
-  user-select: none;
-}
-
-/* Divider */
-.about-divider {
-  border: none;
-  border-top: 1px solid var(--border-color);
-  margin: 0 0 32px;
-}
-
-/* Bio */
-.about-bio {
-  margin-bottom: 48px;
-}
-
-.bio-intro {
+.bio-lead {
+  font-family: "Red Hat Display", sans-serif;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-primary);
   line-height: 1.5;
-  margin: 0 0 16px;
+  margin: 0 0 4px;
 }
 
 .bio-body {
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 15px;
+  font-weight: 400;
   color: var(--text-secondary);
+  line-height: 1.8;
   margin: 0;
 }
 
-/* Capabilities */
-.capabilities-section {
-  margin-bottom: 48px;
+/* ── Capability cards (accent left border) ── */
+
+.bento-cap {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-color);
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.capabilities-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: 24px;
+.bento-cap:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.capability-title {
+.cap-title {
   font-family: "JetBrains Mono", monospace;
   font-size: 12px;
   font-weight: 600;
@@ -120,11 +160,9 @@
   letter-spacing: 1px;
   color: var(--text-primary);
   margin: 0 0 12px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--accent-color);
 }
 
-.capability-list {
+.cap-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -133,95 +171,188 @@
   gap: 8px;
 }
 
-.capability-list li {
+.cap-list li {
   font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.5;
 }
 
-/* Connect links */
-.links-row {
+/* ── Resume card ── */
+
+.bento-resume {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
   display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 16px;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.links-row a {
+.resume-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resume-btn-about {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resume-btn-about:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.resume-btn-about.primary {
+  background: var(--accent-color);
+  color: #ffffff;
+}
+
+.resume-btn-about.secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+/* ── Connect card ── */
+
+.bento-connect {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px 32px;
+}
+
+.connect-label {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-color);
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.connect-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.connect-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: "JetBrains Mono", monospace;
   font-size: 14px;
   color: var(--text-primary);
   text-decoration: none;
   padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  border-bottom: 1.5px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.links-row a:hover {
+.connect-link:hover {
   color: var(--accent-color);
   border-bottom-color: var(--accent-color);
 }
 
-/* Responsive */
+/* ── Responsive ── */
+
 @media screen and (max-width: 768px) {
   .about-section {
-    padding: 40px 20px;
+    padding: 20px 20px 60px;
+    min-height: auto;
   }
 
-  .about-name {
+  .about-bento {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "intro   intro"
+      "bio     bio"
+      "cap1    cap2"
+      "cap3    resume"
+      "connect connect";
+    gap: 16px;
+  }
+
+  .intro-name {
     font-size: 36px;
   }
 
-  .about-role {
-    font-size: 17px;
+  .intro-card-body {
+    padding: 40px 28px;
   }
 
-  .about-meta {
-    gap: 8px;
+  .intro-role {
+    font-size: 18px;
   }
 
-  .meta-item {
-    font-size: 12px;
+  .bio-lead {
+    font-size: 18px;
   }
 
-  .capabilities-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .bio-intro {
-    font-size: 19px;
-  }
-
-  .bio-body {
-    font-size: 15px;
+  .bento-bio {
+    padding: 28px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .about-section {
-    padding: 32px 16px;
+    padding: 16px 16px 50px;
   }
 
-  .about-name {
-    font-size: 28px;
-  }
-
-  .about-role {
-    font-size: 15px;
-  }
-
-  .capabilities-grid {
+  .about-bento {
     grid-template-columns: 1fr;
-    gap: 24px;
+    grid-template-areas:
+      "intro"
+      "bio"
+      "cap1"
+      "cap2"
+      "cap3"
+      "resume"
+      "connect";
+    gap: 14px;
   }
 
-  .bio-intro {
+  .intro-card-body {
+    padding: 36px 24px;
+  }
+
+  .intro-role {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .intro-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .bento-bio {
+    padding: 24px;
+  }
+
+  .bio-lead {
     font-size: 17px;
   }
 
-  .links-row {
-    flex-wrap: wrap;
+  .connect-links {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
   }
 }

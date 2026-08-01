@@ -26,7 +26,7 @@ const Navbar = () => {
     { name: "Experience", href: "/experience", description: "My professional journey" },
     { name: "Projects", href: "/projects", description: "What I've built" },
     { name: "Skills", href: "/skills", description: "Technologies I use" },
-    { name: "Resume", href: "/resume", description: "Download my resume" },
+    { name: "Achievements", href: "/achievements", description: "Talks, blogs & open source" },
   ];
 
   const closeMobileMenu = () => {

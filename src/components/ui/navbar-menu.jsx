@@ -15,7 +15,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-white hover:opacity-[0.9]"
+        className="cursor-pointer text-[var(--text-primary)] hover:text-[var(--accent-color)]"
       >
         {item}
       </motion.p>
@@ -30,7 +30,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
               <motion.div
                 transition={transition}
                 layoutId="active"
-                className="bg-white backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] shadow-xl"
+                className="bg-[var(--card-bg)] backdrop-blur-sm rounded-2xl overflow-hidden border border-[var(--border-color)] shadow-xl"
               >
                 <motion.div layout className="w-max h-full p-4">
                   {children}
@@ -47,31 +47,22 @@ export const MenuItem = ({ setActive, active, item, children }) => {
 export const Menu = ({ setActive, children }) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full border border-transparent bg-black shadow-input flex justify-center space-x-4 px-8 py-6"
+      onMouseLeave={() => setActive(null)}
+      className="relative rounded-full border border-[var(--border-color)] bg-[var(--card-bg)] shadow-[0_2px_20px_rgba(0,0,0,0.06)] flex justify-center space-x-4 px-8 py-6"
     >
       {children}
     </nav>
   );
 };
 
-export const ProductItem = ({ title, description, href, src }) => {
+export const ProductItem = ({ title, description, href }) => {
   return (
     <Link to={href} className="flex space-x-2 items-center">
-      {src && (
-        <img
-          src={src}
-          width={140}
-          height={70}
-          alt={title}
-          className="flex-shrink-0 rounded-md shadow-2xl"
-        />
-      )}
-      <div className={src ? "" : "py-2"}>
-        <h4 className="text-xl font-bold mb-1 text-black">
+      <div className="py-2">
+        <h4 className="text-xl font-bold mb-1 text-[var(--text-primary)]">
           {title}
         </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem]">
+        <p className="text-[var(--text-secondary)] text-sm max-w-[10rem]">
           {description}
         </p>
       </div>

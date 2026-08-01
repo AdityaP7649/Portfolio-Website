@@ -12,14 +12,14 @@ export default function Card({
 }) {
   return (
     <CardContainer className="card-container">
-      <CardBody className="card-body bg-white rounded-xl p-6 w-full max-w-sm">
-        <CardItem translateZ={50} className="text-xl font-bold text-gray-900">
+      <CardBody className="card-body rounded-xl p-6 w-full max-w-sm">
+        <CardItem translateZ={50} className="text-xl font-bold text-[var(--text-primary)]">
           {projectTitle}
         </CardItem>
         <CardItem
           as="p"
           translateZ={60}
-          className="text-gray-600 text-sm mt-2 line-clamp-3"
+          className="text-[var(--text-secondary)] text-sm mt-2 line-clamp-3"
         >
           {projectDescription}
         </CardItem>
@@ -36,7 +36,7 @@ export default function Card({
               {techStack.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full"
+                  className="px-3 py-1 text-xs font-medium bg-[var(--tag-bg)] text-[var(--accent-color)] rounded-full"
                 >
                   {tech}
                 </span>

@@ -1,9 +1,9 @@
 import SplitText from "../SplitText";
 import "./Heading.css";
 
-function Heading({ title, titleId }) {
+function Heading({ title }) {
   return (
-    <div id={titleId}>
+    <div>
       <SplitText
         text={title}
         className="section-heading"

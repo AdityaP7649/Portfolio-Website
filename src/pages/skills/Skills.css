@@ -9,12 +9,14 @@
 }
 
 .category-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   font-family: "Red Hat Display", sans-serif;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
 }
 
 .skill-grid {
