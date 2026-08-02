@@ -5,14 +5,6 @@
   margin: 0 auto;
 }
 
-.achievements-heading {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 36px;
-  font-weight: 800;
-  color: var(--text-primary);
-  margin: 0 0 40px;
-}
-
 .achievements-grid {
   display: flex;
   flex-direction: column;
@@ -111,11 +103,6 @@
     min-height: auto;
   }
 
-  .achievements-heading {
-    font-size: 28px;
-    margin-bottom: 28px;
-  }
-
   .achievements-group {
     padding: 20px;
   }
@@ -124,10 +111,6 @@
 @media screen and (max-width: 480px) {
   .achievements-section {
     padding: 16px 16px 50px;
-  }
-
-  .achievements-heading {
-    font-size: 24px;
   }
 
   .achievement-card {

@@ -4,7 +4,7 @@ export function LampContainer({ children, className }) {
   return (
     <div
       className={cn(
-        "relative flex min-h-[200px] flex-col items-center justify-center overflow-hidden w-full rounded-none z-0 mb-12",
+        "relative flex min-h-[200px] flex-col items-center justify-center overflow-hidden w-full rounded-none z-0 mb-16",
         className
       )}
       style={{ background: "var(--accent-color)" }}

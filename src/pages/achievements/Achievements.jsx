@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { GitPullRequest, Mic, PenLine, ExternalLink } from "lucide-react";
+import Heading from "../../components/heading/Heading";
 import "./Achievements.css";
 
 const cardReveal = (delay = 0) => ({
@@ -95,11 +96,9 @@ const sections = [
 
 function Achievements() {
   return (
+    <>
+      <Heading title="Achievements" />
     <section className="achievements-section">
-      <motion.h2 className="achievements-heading" {...cardReveal(0)}>
-        Achievements
-      </motion.h2>
-
       <div className="achievements-grid">
         {sections.map((section, si) => (
           <motion.div
@@ -146,6 +145,7 @@ function Achievements() {
         ))}
       </div>
     </section>
+    </>
   );
 }
 

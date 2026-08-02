@@ -44,8 +44,7 @@ export default function Card({
             </div>
           </CardItem>
         )}
-        <CardItem translateZ={30} className="w-full mt-4">
-          <div className="project-links">
+        <div className="project-links mt-4" style={{ position: "relative", zIndex: 50 }}>
             {liveUrl && (
               <a
                 href={liveUrl}
@@ -69,7 +68,6 @@ export default function Card({
               </a>
             )}
           </div>
-        </CardItem>
       </CardBody>
     </CardContainer>
   );

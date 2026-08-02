@@ -7,6 +7,13 @@ import Rework from "../../assets/experience-images/reworkai_logo.jpeg";
 import Zensar from "../../assets/experience-images/zensar-technologies-vector-logo.png";
 import "./Experience.css";
 
+const stagger = (i) => ({
+  initial: { opacity: 0, x: -12 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.35, delay: i * 0.06 },
+  viewport: { once: true },
+});
+
 function Experience() {
   const experienceData = [
     {
@@ -86,11 +93,13 @@ function Experience() {
     },
   ];
 
+  let bulletIndex = 0;
+
   const data = experienceData.map((exp) => ({
     title: exp.title,
     content: (
-      <motion.div 
-        className="exp-card"
+      <motion.div
+        className={`exp-card${exp.current ? " exp-card--current" : ""}`}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -98,7 +107,7 @@ function Experience() {
       >
         {/* Mobile Title */}
         <h3 className="exp-mobile-title md:hidden">{exp.title}</h3>
-        
+
         {/* Company Header */}
         <div className="exp-header">
           <div className="exp-logo-wrapper">
@@ -111,14 +120,15 @@ function Experience() {
               {exp.current && <span className="exp-current-badge">Current</span>}
             </div>
             <div className="exp-meta">
-              <div className="exp-meta-item">
+              <span className="exp-meta-item">
                 <Calendar size={14} />
-                <span>{exp.duration}</span>
-              </div>
-              <div className="exp-meta-item">
+                {exp.duration}
+              </span>
+              <span className="exp-meta-item">
                 <MapPin size={14} />
-                <span>{exp.location}</span>
-              </div>
+                {exp.location}
+              </span>
+              <span className="exp-type-badge">{exp.type}</span>
             </div>
           </div>
         </div>
@@ -128,16 +138,19 @@ function Experience() {
           {typeof exp.description[0] === "string" ? (
             <ul>
               {exp.description.map((point, idx) => (
-                <li key={idx}>{point}</li>
+                <motion.li key={idx} {...stagger(idx)}>{point}</motion.li>
               ))}
             </ul>
           ) : (
             exp.description.map((item, idx) => (
               <div key={idx} className="exp-project-group">
-                <h4 className="exp-project-name">{item.project}</h4>
+                <h4 className="exp-project-name">
+                  <span className="exp-project-index">0{idx + 1}</span>
+                  {item.project}
+                </h4>
                 <ul>
                   {item.points.map((point, pIdx) => (
-                    <li key={pIdx}>{point}</li>
+                    <motion.li key={pIdx} {...stagger(bulletIndex++)}>{point}</motion.li>
                   ))}
                 </ul>
               </div>
