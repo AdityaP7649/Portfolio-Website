@@ -12,7 +12,9 @@ import Nuxt from "../../assets/skills-images/nuxt-2.svg";
 import Node from "../../assets/skills-images/nodejs-1.svg";
 import Express from "../../assets/skills-images/icons8-express-js.svg";
 import FastAPI from "../../assets/skills-images/fastapi.svg";
+import Pydantic from "../../assets/skills-images/pydantic.svg"
 import LangChain from "../../assets/skills-images/langchain.svg";
+import LangGraph from "../../assets/skills-images/langgraph.svg"
 import MySql from "../../assets/skills-images/mysql-2.svg";
 import MongoDB from "../../assets/skills-images/mongodb-icon-1.svg";
 import PostgreSQL from "../../assets/skills-images/postgresql.svg";
@@ -35,10 +37,37 @@ import LlamaStack from "../../assets/skills-images/llama-stack.png";
 import CI_CD from "../../assets/skills-images/ci-cd.png";
 import GithubActions from "../../assets/skills-images/githubactions.svg";
 import Postman from "../../assets/skills-images/postman.svg";
+import GoogleADK from "../../assets/skills-images/google-adk.svg"
+import SupaBase from "../../assets/skills-images/supabase.svg"
 import "./Skills.css";
 
 function Skills() {
   const skillCategories = [
+    {
+      title: "AI & LLMs",
+      skills: [
+        { name: "LangChain", image: LangChain },
+        { name: "LangGraph", image: LangGraph },
+        { name: "RAG", image: RAG },
+        { name: "LLM Integration", image: LLMIntegration },
+        { name: "Prompt Engineering", image: PromptEngineering },
+        { name: "Model Context Protocol", image: ModelContextProtocol },
+        { name: "LlamaStack/OGX", image: LlamaStack },
+        { name: "Google ADK", image: GoogleADK },
+      ],
+    },
+    {
+      title: "Backend",
+      skills: [
+        { name: "Python", image: Python },
+        { name: "FastAPI", image: FastAPI },
+        { name: "Pydantic", image: Pydantic},
+        { name: "Node.js", image: Node },
+        { name: "Express", image: Express },
+        { name: "GraphQL", image: GraphQL },
+        { name: "REST APIs", image: RestAPI },
+      ],
+    },
     {
       title: "Frontend",
       skills: [
@@ -48,31 +77,18 @@ function Skills() {
         { name: "TypeScript", image: TypeScript },
         { name: "React", image: ReactIcon },
         { name: "Vue", image: Vue },
-        { name: "Angular", image: Angular },
         { name: "Nuxt", image: Nuxt },
         { name: "Next.js", image: NextJS },
       ],
     },
     {
-      title: "Backend",
+      title: "Cloud & DevOps",
       skills: [
-        { name: "Python", image: Python },
-        { name: "FastAPI", image: FastAPI },
-        { name: "Node.js", image: Node },
-        { name: "Express", image: Express },
-        { name: "GraphQL", image: GraphQL },
-        { name: "REST APIs", image: RestAPI },
-      ],
-    },
-    {
-      title: "AI",
-      skills: [
-        { name: "LangChain", image: LangChain },
-        { name: "RAG", image: RAG },
-        { name: "LLM Integration", image: LLMIntegration },
-        { name: "Prompt Engineering", image: PromptEngineering },
-        { name: "Model Context Protocol", image: ModelContextProtocol },
-        { name: "LlamaStack/OGX", image: LlamaStack },
+        { name: "Docker", image: Docker },
+        { name: "Podman", image: Podman },
+        { name: "OpenShift", image: OpenShift },
+        { name: "CI/CD", image: CI_CD },
+        { name: "Github Actions", image: GithubActions },
       ],
     },
     {
@@ -82,16 +98,7 @@ function Skills() {
         { name: "MySQL", image: MySql },
         { name: "PostgreSQL", image: PostgreSQL },
         { name: "ChromaDB", image: ChromaDB },
-      ],
-    },
-    {
-      title: "Devops",
-      skills: [
-        { name: "Docker", image: Docker },
-        { name: "Podman", image: Podman },
-        { name: "OpenShift", image: OpenShift },
-        { name: "CI/CD", image: CI_CD },
-        { name: "Github Actions", image: GithubActions },
+        { name: "Supabase", image: SupaBase },
       ],
     },
     {
