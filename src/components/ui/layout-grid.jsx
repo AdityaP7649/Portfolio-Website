@@ -59,7 +59,7 @@ function CardThumbnail({ card }) {
         layoutId={`image-${card.id}-image`}
         src={card.thumbnail}
         alt={card.title || "thumbnail"}
-        className="object-cover object-top absolute inset-0 h-full w-full transition duration-200"
+        className="absolute inset-0 h-full w-full object-cover object-center transition duration-200"
       />
     );
   }
