@@ -1,23 +1,20 @@
-import SplitText from "../SplitText";
+import { motion } from "framer-motion";
+import { LampContainer } from "../ui/lamp";
 import "./Heading.css";
 
 function Heading({ title }) {
   return (
-    <div>
-      <SplitText
-        text={title}
+    <LampContainer>
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
         className="section-heading"
-        delay={40}
-        duration={0.8}
-        ease="power3.out"
-        splitType="chars"
-        from={{ opacity: 0, y: 50, rotateX: -90 }}
-        to={{ opacity: 1, y: 0, rotateX: 0 }}
-        threshold={0.2}
-        rootMargin="-50px"
-        tag="h1"
-      />
-    </div>
+      >
+        {title}
+      </motion.h1>
+    </LampContainer>
   );
 }
 

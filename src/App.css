@@ -67,13 +67,7 @@ img {
   flex: 1;
   position: relative;
   z-index: 1;
-}
-
-/* Mobile: add padding for fixed navbar */
-@media screen and (max-width: 768px) {
-  .main-content {
-    padding-top: 73px;
-  }
+  padding-bottom: 100px;
 }
 
 /* Selection */
@@ -105,14 +99,6 @@ img {
     min-height: 44px;
   }
 
-  /* Account for fixed navbar when scrolling to sections */
-  [id] {
-    scroll-margin-top: 90px;
-  }
-
-  section, .section-heading, h1, h2, h3 {
-    scroll-margin-top: 90px;
-  }
 }
 
 @media screen and (max-width: 480px) {

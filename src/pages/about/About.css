@@ -1,48 +1,29 @@
 .about-section {
-  padding: 100px 20px 80px;
+  padding: 60px 20px 80px;
   min-height: 100vh;
 }
 
-/* Bento grid */
-.about-bento {
+/* ── Hero intro (dark card) ── */
+
+.about-hero {
   max-width: 960px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "intro   intro   intro"
-    "bio     bio     bio"
-    "cap1    cap2    cap3"
-    "resume  connect connect";
-  gap: 20px;
-}
-
-.bento-intro   { grid-area: intro; }
-.bento-bio     { grid-area: bio; }
-.bento-cap-1   { grid-area: cap1; }
-.bento-cap-2   { grid-area: cap2; }
-.bento-cap-3   { grid-area: cap3; }
-.bento-resume  { grid-area: resume; }
-.bento-connect { grid-area: connect; }
-
-/* ── Intro card (dark, 3D tilt) ── */
-
-.bento-intro {
+  margin: 0 auto 40px;
   border-radius: 20px;
   overflow: hidden;
 }
 
-.intro-card-container {
-  width: 100% !important;
-}
-
-.intro-card-body {
+.hero-inner {
   position: relative;
   background: var(--accent-color);
   border-radius: 20px;
   padding: 60px 56px;
   color: #ffffff;
   overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .intro-dot-grid {
@@ -56,11 +37,6 @@
   background-size: 24px 24px;
   pointer-events: none;
   z-index: 0;
-}
-
-.intro-card-body > * {
-  position: relative;
-  z-index: 1;
 }
 
 .intro-label {
@@ -81,7 +57,6 @@
   color: #ffffff;
   line-height: 1.1;
   margin: 0 0 12px;
-  overflow: hidden;
 }
 
 .intro-role {
@@ -107,227 +82,40 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-/* ── Bio card (full width) ── */
+/* ── Layout Grid wrapper ── */
 
-.bento-bio {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 40px 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.bio-lead {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.5;
-  margin: 0 0 4px;
-}
-
-.bio-body {
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--text-secondary);
-  line-height: 1.8;
-  margin: 0;
-}
-
-/* ── Capability cards (accent left border) ── */
-
-.bento-cap {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-left: 3px solid var(--accent-color);
-  border-radius: 16px;
-  padding: 24px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.bento-cap:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-.cap-title {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-primary);
-  margin: 0 0 12px;
-}
-
-.cap-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.cap-list li {
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-/* ── Resume card ── */
-
-.bento-resume {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.resume-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.resume-btn-about {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 10px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.resume-btn-about:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.resume-btn-about.primary {
-  background: var(--accent-color);
-  color: #ffffff;
-}
-
-.resume-btn-about.secondary {
-  background: transparent;
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
-}
-
-/* ── Connect card ── */
-
-.bento-connect {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 24px 32px;
-}
-
-.connect-label {
-  display: block;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--accent-color);
-  letter-spacing: 0.5px;
-  margin-bottom: 16px;
-}
-
-.connect-links {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.connect-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 14px;
-  color: var(--text-primary);
-  text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 1.5px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.connect-link:hover {
-  color: var(--accent-color);
-  border-bottom-color: var(--accent-color);
+.about-grid-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 /* ── Responsive ── */
 
 @media screen and (max-width: 768px) {
   .about-section {
-    padding: 20px 20px 60px;
+    padding: 20px 16px 60px;
     min-height: auto;
   }
 
-  .about-bento {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "intro   intro"
-      "bio     bio"
-      "cap1    cap2"
-      "cap3    resume"
-      "connect connect";
-    gap: 16px;
+  .hero-inner {
+    padding: 40px 28px;
   }
 
   .intro-name {
     font-size: 36px;
   }
 
-  .intro-card-body {
-    padding: 40px 28px;
-  }
-
   .intro-role {
     font-size: 18px;
-  }
-
-  .bio-lead {
-    font-size: 18px;
-  }
-
-  .bento-bio {
-    padding: 28px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .about-section {
-    padding: 16px 16px 50px;
+    padding: 16px 12px 50px;
   }
 
-  .about-bento {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "intro"
-      "bio"
-      "cap1"
-      "cap2"
-      "cap3"
-      "resume"
-      "connect";
-    gap: 14px;
-  }
-
-  .intro-card-body {
+  .hero-inner {
     padding: 36px 24px;
   }
 
@@ -340,19 +128,5 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-  }
-
-  .bento-bio {
-    padding: 24px;
-  }
-
-  .bio-lead {
-    font-size: 17px;
-  }
-
-  .connect-links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
   }
 }
